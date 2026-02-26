@@ -8,10 +8,33 @@ var maximumWealth = function(ac) {
         }
         max = max<sum?sum:max
     }
-    console.log(max)
     return max
 };
 
 let ar = [[1,5],[7,3],[3,5]]
 
 maximumWealth(ar)
+
+
+// use Math.max and array push
+/**
+//  * @param {number[][]} accounts
+//  * @return {number}
+//  */
+// var maximumWealth = function(accounts) {
+
+//     // solution 1
+// let highest =  []
+
+//     for(let i = 0; i < accounts.length; i++) {
+//         let sum = 0
+//         for (let j = 0; j < accounts[i].length; j++) {
+//             sum += accounts[i][j]
+            
+//         }
+
+//         highest.push(sum)
+//     }
+
+//     return Math.max(...highest)
+// };
