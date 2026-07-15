@@ -5,11 +5,18 @@ var romanToInt = function(s) {
         return romans[e]
     })
         let result = 0
-        while(num.length > 0){
-            result+=num.shift()
+        for(let i = 0;i<num.length;i++){
+            if(num[i]>=num[i+1] || i == num.length -1){ // math.max
+                result+=num[i]
+            }else if(num[i]<num[i+1]){
+
+                result= result + (num[i+1]-num[i])
+                i++;
+            }
+            console.log(result)
         }
-    return [num,result]
+    return result
 };
 
 
-console.log(romanToInt("iv"))
+console.log(romanToInt("III"))
